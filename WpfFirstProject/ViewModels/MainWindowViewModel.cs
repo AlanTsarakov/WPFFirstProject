@@ -36,6 +36,7 @@ namespace WpfFirstProject.ViewModels
         {
             CountClicks++;
         }
+
         public MainWindowViewModel()
         {
             _mainButton = new MainButton();

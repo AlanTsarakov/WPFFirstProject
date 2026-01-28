@@ -21,6 +21,14 @@ namespace WpfFirstProject
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+            MainWindowGrid.Children.Add(new Button() { Width = 20, Height = 20});
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            SecondTestWindow second = new SecondTestWindow();
+            second.ShowDialog();
         }
     }
 }

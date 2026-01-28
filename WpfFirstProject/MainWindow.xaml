@@ -4,17 +4,14 @@
         Title="Счетчик кликов" Height="500" Width="600"
         WindowStartupLocation="CenterScreen">
 
-    <Grid Margin="20,10,20,20">
+    <Grid x:Name="MainWindowGrid" Margin="20,10,20,20">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <!-- Заголовок -->
 
             <!-- Отображение счетчика -->
-            <TextBlock Text="{Binding DisplayText}"
-                       FontSize="18"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,20"/>
-            <TextBlock Text="Счетчик кликов" 
+
+            <TextBlock x:Name="textBlock" Text="Счетчик кликов" 
                        FontSize="24" 
                        FontWeight="Bold"
                        />
@@ -40,8 +37,13 @@
                     FontSize="14"
                     Padding="15,5"
                     Background="LightCoral"
-                    Cursor="Hand"/>
-
+                    Cursor="Hand">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <!-- Дополнительная информация -->
             <StackPanel Margin="0,20,0,0">
                 <TextBlock Text="Статистика:" 
@@ -56,5 +58,6 @@
                 </TextBlock>
             </StackPanel>
         </StackPanel>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="466,190,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>
