@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using WpfFirstProject.ViewModels;
 
 namespace WpfFirstProject
@@ -17,11 +18,47 @@ namespace WpfFirstProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int clickCount = 0;
+        DispatcherTimer timer = new DispatcherTimer();
+        Random random = new Random();
         public MainWindow()
         {
             InitializeComponent();
+            timer.Interval = TimeSpan.FromSeconds(2);
+            timer.Start();
             DataContext = new MainWindowViewModel();
-            MainWindowGrid.Children.Add(new Button() { Width = 20, Height = 20});
+            var btn = new Button() { Width = 20, Height = 20, HorizontalAlignment = HorizontalAlignment.Left };
+            stackPanel.Children.Add(btn);
+            btn.Click += Btn_Click;
+            timer.Tick += Timer_Tick;
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            int rndInt = random.Next(1, 100);
+
+            if (rndInt%2 == 0)
+            {
+                mainWindowGrid.Background = Brushes.Red;
+            }
+            else
+            {
+                mainWindowGrid.Background = Brushes.Gainsboro;
+            }
+        }
+
+        private void Btn_Click(object sender, RoutedEventArgs e)
+        {
+            clickCount++;
+            Button btn = (Button)sender;
+            if (clickCount % 2 == 0)
+            {
+                btn.Background = Brushes.Red;
+            }
+            else
+            {
+                btn.Background = Brushes.Green;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -4,8 +4,8 @@
         Title="Счетчик кликов" Height="500" Width="600"
         WindowStartupLocation="CenterScreen">
 
-    <Grid x:Name="MainWindowGrid" Margin="20,10,20,20">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid x:Name="mainWindowGrid" Margin="20,10,20,20" Background="#FFEB7A7A" OpacityMask="#FF8A6F6F">
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <!-- Заголовок -->
 
@@ -58,6 +58,5 @@
                 </TextBlock>
             </StackPanel>
         </StackPanel>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="466,190,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>
