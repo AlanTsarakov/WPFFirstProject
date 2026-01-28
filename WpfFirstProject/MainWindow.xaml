@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfFirstProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Счетчик кликов" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20,10,20,20">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <!-- Заголовок -->
+
+            <!-- Отображение счетчика -->
+            <TextBlock Text="{Binding DisplayText}"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+            <TextBlock Text="Счетчик кликов" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       />
+
+            <!-- Кнопка для кликов -->
+            <Button Content="{Binding ButtonText}"
+                    Command="{Binding ClickCommand}"
+                    FontSize="16"
+                    Padding="20,10"
+                    Margin="0,0,0,10"
+                    Background="LightBlue"
+                    Cursor="Hand">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!-- Кнопка сброса -->
+            <Button Content="Сбросить счетчик"
+                    Command="{Binding ResetCommand}"
+                    FontSize="14"
+                    Padding="15,5"
+                    Background="LightCoral"
+                    Cursor="Hand"/>
+
+            <!-- Дополнительная информация -->
+            <StackPanel Margin="0,20,0,0">
+                <TextBlock Text="Статистика:" 
+                           FontWeight="Bold"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock>
+                    <Run Text="Текущее значение:"/>
+                    <Run Text="{Binding CountClicks}" 
+                         FontWeight="Bold" 
+                         Foreground="Blue"/>
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
