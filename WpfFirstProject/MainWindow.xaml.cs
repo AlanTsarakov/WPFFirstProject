@@ -50,6 +50,10 @@ namespace WpfFirstProject
         private void Btn_Click(object sender, RoutedEventArgs e)
         {
             clickCount++;
+            progressBar.Value = Convert.ToDouble(clickCount);
+            progressBar.Visibility = Visibility.Visible;
+            progressBar.UpdateLayout();
+
             Button btn = (Button)sender;
             if (clickCount % 2 == 0)
             {

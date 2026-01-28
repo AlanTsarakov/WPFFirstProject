@@ -8,6 +8,14 @@ namespace WpfFirstProject.Models
 {
     internal class User
     {
+        public User(int id, string name, string email, string status)
+        {
+            Id = id;
+            Name = name;
+            Email = email;
+            Status = status;
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
