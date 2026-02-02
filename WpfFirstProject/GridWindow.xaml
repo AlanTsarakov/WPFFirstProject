@@ -8,25 +8,25 @@
         Title="GridWindow" Height="450" Width="800">
     <Grid Background="DeepPink">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="40*"></ColumnDefinition>
+            <ColumnDefinition Width="40*"></ColumnDefinition>
+            <ColumnDefinition Width="17*"></ColumnDefinition>
+            <ColumnDefinition Width="63*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Background="Violet" Grid.Row="0" Grid.Column="1" CornerRadius="100">
+        <Border Background="Violet" Grid.Row="0" Grid.Column="1" CornerRadius="100" Margin="0,0,0,108" Grid.RowSpan="2">
             <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">1</TextBlock>
         </Border>
-        <Border Background="Violet" Grid.Row="0" Grid.Column="0" CornerRadius="100">
+        <Border Background="Violet" Grid.Row="0" Grid.Column="0" CornerRadius="100" Margin="0,0,0,108" Grid.RowSpan="2">
             <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
         </Border>
-        <Border Background="Violet" Grid.Row="0" Grid.Column="2" CornerRadius="100">
+        <Border Background="Violet" Grid.Row="0" Grid.Column="2" CornerRadius="100" Margin="0,0,0,108" Grid.RowSpan="2">
             <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
         </Border>
-        <Border Background="Violet" Grid.Row="0" Grid.Column="3" CornerRadius="100">
+        <Border Background="Violet" Grid.Row="0" Grid.Column="3" CornerRadius="100" Margin="0,0,0,108" Grid.RowSpan="2">
             <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
         </Border>
         <Grid Grid.Column="0" Grid.Row="1">
