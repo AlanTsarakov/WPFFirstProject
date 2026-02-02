@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfFirstProject"
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="DeepPink">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -17,7 +17,17 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">1</TextBlock>
+        <Border Background="Violet" Grid.Row="0" Grid.Column="1" CornerRadius="100">
+            <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">1</TextBlock>
+        </Border>
+        <Border Background="Violet" Grid.Row="0" Grid.Column="0" CornerRadius="100">
+            <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
+        </Border>
+        <Border Background="Violet" Grid.Row="0" Grid.Column="2" CornerRadius="100">
+            <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
+        </Border>
+        <Border Background="Violet" Grid.Row="0" Grid.Column="3" CornerRadius="100">
+            <TextBlock FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">1</TextBlock>
+        </Border>
     </Grid>
 </Window>
